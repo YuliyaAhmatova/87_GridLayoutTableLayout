@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        app:title="Калькулятор"
+        app:titleTextColor="@color/white"
+        app:titleMarginStart="20dp"
+        android:id="@+id/toolbarMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mediumPurple"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/inputResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
+        tools:ignore="UselessLeaf">
+
+        <EditText
+            android:id="@+id/inputET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            tools:ignore="Autofill,TextFields" />
+
+        <TextView
+            android:id="@+id/resultTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/result"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/black"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:columnCount="4"
+            android:rowCount="7">
+
+            <Button
+                android:id="@+id/divBTN"
+                android:text="@string/div"
+                android:layout_column="3"/>
+            <Button
+                android:id="@+id/oneBTN"
+                android:text="@string/one"/>
+            <Button
+                android:id="@+id/twoBTN"
+                android:text="@string/two"/>
+            <Button
+                android:id="@+id/threeBTN"
+                android:text="@string/three"/>
+            <Button
+                android:id="@+id/multBTN"
+                android:text="@string/mult"/>
+            <Button
+                android:id="@+id/fourBTN"
+                android:text="@string/four"/>
+            <Button
+                android:id="@+id/fiveBTN"
+                android:text="@string/five"/>
+            <Button
+                android:id="@+id/sixBTN"
+                android:text="@string/six"/>
+            <Button
+                android:id="@+id/difBTN"
+                android:text="@string/dif"/>
+            <Button
+                android:id="@+id/sevenBTN"
+                android:text="@string/seven"/>
+            <Button
+                android:id="@+id/eightBTN"
+                android:text="@string/eight"/>
+            <Button
+                android:id="@+id/nineBTN"
+                android:text="@string/nine"/>
+            <Button
+                android:id="@+id/sumBTN"
+                android:text="@string/sum"
+                android:layout_rowSpan="3"
+                android:layout_height="140dp"/>
+            <Button
+                android:id="@+id/zeroBTN"
+                android:text="@string/zero"
+                android:layout_columnSpan="2"
+                android:layout_width="180dp"/>
+            <Button
+                android:id="@+id/equalsBTN"
+                android:text="@string/equals"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_width="270dp"/>
+            <Button
+                android:id="@+id/resetBTN"
+                android:text="@string/reset"
+                android:layout_columnSpan="4"
+                android:layout_width="360dp"/>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
